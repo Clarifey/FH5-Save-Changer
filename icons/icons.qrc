@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>github.svg</file>
+    <file>refresh-cw.svg</file>
+    <file>repeat.svg</file>
+    <file>x.svg</file>
+    <file>refresh-cw.svg</file>
+    <file>repeat.svg</file>
+    <file>x.svg</file>
+  </qresource>
+</RCC>
