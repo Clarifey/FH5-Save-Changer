@@ -4,6 +4,7 @@ import sys
 from PyQt5.QtCore import Qt
 from tools import copy_save,replace_latest_save
 import os
+import webbrowser
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -118,6 +119,7 @@ class Ui_Form(object):
         self.github.setIcon(icon3)
         self.github.setIconSize(QtCore.QSize(32, 32))
         self.github.setObjectName("github")
+        self.github.clicked.connect(self.Github)
         self.label_3 = QtWidgets.QLabel(self.main)
         self.label_3.setGeometry(QtCore.QRect(250, 400, 101, 41))
         self.label_3.setStyleSheet("QLabel{\n"
@@ -132,6 +134,9 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def Github(self):
+        webbrowser.open("https://github.com/Clarifey")
 
     def backUp(self):
         if os.path.exists('./backups') is not True:
